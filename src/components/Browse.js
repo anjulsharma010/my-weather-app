@@ -43,9 +43,10 @@ function Browse() {
           </div>
           <h1>{weather?.name}</h1>
           <div className="list">
-            <p>Humidity: {weather?.main?.humidity}</p>
-            <p>Pressure: {weather?.main?.pressure}</p>
-            <p>Wind Speed: {weather?.wind?.speed}</p>
+            <p>Humidity: {`${Math.floor(weather?.main?.humidity)} g/kg`}</p>
+            <p>Pressure: {`${Math.floor(weather?.main?.pressure/1000)} Pa`}</p>
+            <p>Wind Speed: {`${Math.floor(weather?.wind?.speed)} km/h`}</p>
+          
           </div>
         </div>
       ): <h1 style={{padding: '10px 20px'}}>No Data Found</h1>}
