@@ -1,7 +1,5 @@
-// weatherSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// Async thunk for fetching weather data
 export const fetchWeather = createAsyncThunk(
   "weather/fetchWeather",
   async (city) => {

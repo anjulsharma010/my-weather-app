@@ -1,10 +1,8 @@
-// Browse.js
 import "../index.css";
 import React, { useEffect } from "react";
 import Logout from "./Logout";
 import { useDispatch, useSelector } from "react-redux";
 import { setCity, fetchWeather } from "../utils/weatherSlice";
-
 
 function Browse() {
   const dispatch = useDispatch();
@@ -47,7 +45,7 @@ function Browse() {
             </div>
           </div>
         ) : (
-          <h1 style={{ padding: "10px 20px" }}>No Data Found</h1>
+          <h1>No Data Found</h1>
         )}
       </div>
       <Logout />

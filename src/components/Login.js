@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import Header from "./Logout";
 import { checkValidData } from "../utils/validateLogic";
 import {
   createUserWithEmailAndPassword,
@@ -35,7 +34,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          navigate("/browse")
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -51,7 +50,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          navigate("/browse")
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -62,8 +61,6 @@ const Login = () => {
   };
   return (
     <div>
-     
-      
       <form
         onSubmit={(e) => {
           e.preventDefault();
