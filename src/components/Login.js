@@ -89,13 +89,22 @@ const Login = () => {
           placeholder="Password"
           className="p-3 my-3 w-full rounded-sm bg-gray-600 outline-0 bg-opacity-50"
         />
-        <p className="text-red-500 font-bold-sm text-lg py-2">{errorMessage}</p>
+        <p className="text-red-500 font-bold-sm text-sm py-2">{errorMessage}</p>
+        
         <button
           className="px-3 py-2 my-3 bg-red-600 rounded-sm w-full"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign in" : "Sign up"}
         </button>
+       {(password?.current?.value &&errorMessage) && <div className="text-red-500 font-bold-sm text-xs">
+          <ul className="list-none">
+            <li>Minimum 8 characters</li>
+            <li>First letter uppercase</li>
+            <li>At least one number</li>
+            <li>At least one Special character</li>
+          </ul>
+        </div>}
         <p
           className="py-4 text-center cursor-pointer"
           onClick={toggleSignInForm}
