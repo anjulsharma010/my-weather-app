@@ -39,7 +39,7 @@ function Browse() {
             <div className="list">
               <p>Humidity: {`${Math.floor(weather?.main?.humidity)} g/kg`}</p>
               <p>
-                Pressure: {`${Math.floor(weather?.main?.pressure / 1000)} Pa`}
+                Pressure: {`${Math.floor(weather?.main?.pressure)} Pa`}
               </p>
               <p>Wind Speed: {`${Math.floor(weather?.wind?.speed)} km/h`}</p>
             </div>
